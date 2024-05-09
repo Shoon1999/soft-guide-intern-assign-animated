@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+    .container{
+        background-color: white;
+        height: 140px;
+        box-shadow: 1px 1px whitesmoke;
+        
+    }
+    .container1{
+        width: 100%;
+    }
+    h1{
+        margin: 50px;
+    }
+    button{
+        width: auto;
+        height: 50px;
+        padding: 20px;
+        margin-left:50px;
+        background-color: rgb(138, 63, 10);
+        border-radius: 10px;
+        text-align: center;
+        font-size:medium;
+        animation-name: moving;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 3;
+    }
+    @keyframes moving{
+        0%{
+            transform:translateX(0px) rotate(0deg);
+        }
+        25%{
+            transform:translateX(200px) rotate(360deg);
+        }
+        50%{
+            transform:translateX(700px) rotate(80deg);
+        }
+        75%{
+            transform:translateX(400px) rotate(0deg);
+        }
+        100%{
+            transform:translateX(-300px) rotate(0deg);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Animated Button</h1>
+        <div class="container1">
+            <button>Animated</button>
+        </div>
+    </div>
+</body>
+</html>
